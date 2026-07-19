@@ -1,5 +1,35 @@
 import { defineNuxtConfig } from 'nuxt/config'
 
+// BLK-1 guard: the key exposed to the browser must be the anon/publishable key,
+// never the service_role key (which bypasses all RLS). Fail the build loudly if
+// a service_role JWT is ever wired into the public client key.
+function assertNotServiceRole(key: string | undefined, label: string) {
+  if (!key) return
+  // New-format Supabase secret keys are opaque (not JWTs) — catch by prefix.
+  if (key.startsWith('sb_secret_')) {
+    throw new Error(
+      `[security] ${label} is a secret (sb_secret_) key. Refusing to expose it to the client — ` +
+      `use the sb_publishable_ (anon) key. See finding BLK-1.`,
+    )
+  }
+  try {
+    const segment = key.split('.')[1]
+    if (!segment) return // non-JWT (e.g. new sb_publishable_ keys) — nothing to decode
+    const payload = JSON.parse(Buffer.from(segment, 'base64url').toString('utf8'))
+    if (payload?.role === 'service_role') {
+      throw new Error(
+        `[security] ${label} is a service_role key. Refusing to expose it to the client — ` +
+        `set it to the anon/publishable key. See finding BLK-1.`,
+      )
+    }
+  } catch (e) {
+    if (e instanceof Error && e.message.startsWith('[security]')) throw e
+    // Undecodable/opaque key: leave it alone.
+  }
+}
+
+const publicSupabaseKey = process.env.SUPABASE_KEY || process.env.SUPABASE_ANON_KEY
+assertNotServiceRole(publicSupabaseKey, 'SUPABASE_KEY / public.supabaseKey')
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -97,7 +127,7 @@ export default defineNuxtConfig({
 
   supabase: {
     url: process.env.SUPABASE_URL,
-    key: process.env.SUPABASE_KEY || process.env.SUPABASE_ANON_KEY,
+    key: publicSupabaseKey,
     serviceKey: process.env.SUPABASE_SERVICE_ROLE_KEY,
     redirect: false,
   },
@@ -114,7 +144,7 @@ export default defineNuxtConfig({
     resendApiKey: process.env.RESEND_API_KEY,
     public: {
       supabaseUrl: process.env.SUPABASE_URL,
-      supabaseKey: process.env.SUPABASE_KEY || process.env.SUPABASE_ANON_KEY,
+      supabaseKey: publicSupabaseKey,
       stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
     }
   },
