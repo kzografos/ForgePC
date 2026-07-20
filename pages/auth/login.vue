@@ -17,6 +17,17 @@ const password = ref('')
 const loading = ref(false)
 const error = ref<string | null>(null)
 
+// Demo accounts printed on the login screen (HIGH-1).
+// NOTE: these strings must match the Supabase Auth users you provisioned.
+const demoAccounts = [
+  { label: 'Admin', email: 'admin@kzproducts.dev', password: 'DemoAdmin123' },
+  { label: 'Shopper', email: 'shopper@kzproducts.dev', password: 'DemoUser123' },
+]
+const fillDemo = (account: { email: string; password: string }) => {
+  email.value = account.email
+  password.value = account.password
+}
+
 watch(user, () => {
   if (user.value) {
     router.push('/')
@@ -61,6 +72,30 @@ const handleLogin = async () => {
         Enter your credentials to access your account
       </p>
     </div>
+
+    <!-- Demo accounts (HIGH-1) -->
+    <div class="rounded-lg border border-primary/20 bg-primary/5 p-4 text-sm">
+      <p class="mb-3 font-medium text-foreground">
+        Demo accounts
+        <span class="font-normal text-muted-foreground">— click to fill</span>
+      </p>
+      <div class="grid gap-2">
+        <button
+          v-for="account in demoAccounts"
+          :key="account.email"
+          type="button"
+          class="flex items-center justify-between gap-3 rounded-md border border-white/10 bg-white/5 px-3 py-2 text-left transition-colors hover:border-primary/40 hover:bg-white/10"
+          @click="fillDemo(account)"
+        >
+          <span class="min-w-0">
+            <span class="font-medium text-foreground">{{ account.label }}</span>
+            <span class="block truncate text-xs text-muted-foreground">{{ account.email }}</span>
+          </span>
+          <span class="shrink-0 text-xs font-medium text-primary">Use &rarr;</span>
+        </button>
+      </div>
+    </div>
+
     <form @submit.prevent="handleLogin">
       <div class="grid gap-4">
         <div class="grid gap-2">
