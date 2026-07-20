@@ -160,7 +160,9 @@ const toggleFlag = async (review: ReviewWithProduct) => {
 }
 
 // Delete review
+const { blockedInDemo } = useDemoGuard()
 const deleteReview = async (review: ReviewWithProduct) => {
+  if (blockedInDemo('Deleting reviews')) return
   if (!confirm('Are you sure you want to delete this review? This action cannot be undone.')) return
   
   try {

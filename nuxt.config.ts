@@ -146,6 +146,9 @@ export default defineNuxtConfig({
       supabaseUrl: process.env.SUPABASE_URL,
       supabaseKey: publicSupabaseKey,
       stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
+      // BLK-2: demo-mode is ON unless explicitly disabled (fail-safe).
+      // Set DEMO_MODE=false to allow destructive admin actions (real catalog work).
+      demoMode: process.env.DEMO_MODE !== 'false',
     }
   },
   components: [

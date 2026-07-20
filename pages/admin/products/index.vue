@@ -14,6 +14,7 @@ definePageMeta({
 })
 
 const client = useSupabaseClient<Database>()
+const { blockedInDemo } = useDemoGuard()
 
 // CSV Import/Export
 const { loading: csvLoading, exportProductsToCsv, parseImportFile, importProducts } = useCsvProducts()
@@ -94,6 +95,7 @@ const confirmDelete = (product: Product) => {
 // Delete product
 const handleDelete = async () => {
   if (!productToDelete.value) return
+  if (blockedInDemo('Deleting products')) { deleteConfirmOpen.value = false; return }
 
   try {
     const { error } = await client
@@ -154,6 +156,7 @@ const handleImportFile = async (file: File) => {
 // CSV Import confirm handler
 const handleImportConfirm = async (confirmedCategories: string[]) => {
   if (!importPreview.value) return
+  if (blockedInDemo('Bulk product import')) { importModalOpen.value = false; return }
   
   importLoading.value = true
   try {

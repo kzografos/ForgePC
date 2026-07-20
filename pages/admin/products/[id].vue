@@ -121,8 +121,10 @@ function handleStockBlur() {
 }
 
 // Delete product
+const { blockedInDemo } = useDemoGuard()
 async function handleDelete() {
   if (!product.value) return
+  if (blockedInDemo('Deleting products')) return
 
   try {
     const { error } = await client

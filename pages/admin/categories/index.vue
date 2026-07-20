@@ -62,7 +62,9 @@ const handleEdit = (category: Category) => {
 }
 
 // Delete category
+const { blockedInDemo } = useDemoGuard()
 const handleDelete = async (category: Category) => {
+  if (blockedInDemo('Deleting categories')) return
   if (deleteConfirm.value !== category.id) {
     deleteConfirm.value = category.id
     return
