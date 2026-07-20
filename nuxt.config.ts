@@ -149,6 +149,8 @@ export default defineNuxtConfig({
       // BLK-2: demo-mode is ON unless explicitly disabled (fail-safe).
       // Set DEMO_MODE=false to allow destructive admin actions (real catalog work).
       demoMode: process.env.DEMO_MODE !== 'false',
+      // HIGH-3: absolute origin for OpenGraph/Twitter image URLs.
+      siteUrl: process.env.SITE_URL || 'https://kz-products.vercel.app',
     }
   },
   components: [
