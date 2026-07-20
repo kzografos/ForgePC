@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { LogOut, User, Package, Settings, Heart } from "lucide-vue-next";
+import { LogOut, User, Package, Settings, Heart, LayoutDashboard } from "lucide-vue-next";
 import { Button } from "~/components/ui/button";
 import {
   DropdownMenu,
@@ -28,19 +28,21 @@ const avatarMap: Record<string, string> = {
   "abstract-2": "🟣",
 };
 
-// Fetch user's avatar from profile
+// Fetch user's avatar + admin flag from profile
 const avatarId = ref("default");
+const isAdmin = ref(false);
 
 const fetchUserAvatar = async () => {
   if (!user.value?.id) return;
   try {
     const { data } = await client
       .from("profiles")
-      .select("avatar_id")
+      .select("avatar_id, is_admin")
       .eq("id", user.value.id)
       .single();
-    if (data && (data as any).avatar_id) {
-      avatarId.value = (data as any).avatar_id;
+    if (data) {
+      if ((data as any).avatar_id) avatarId.value = (data as any).avatar_id;
+      isAdmin.value = !!(data as any).is_admin;
     }
   } catch (e) {
     // Fallback to default
@@ -135,6 +137,16 @@ const handleLogout = async () => {
             </div>
           </DropdownMenuLabel>
           <DropdownMenuSeparator class="bg-white/10" />
+          <template v-if="isAdmin">
+            <DropdownMenuItem
+              @click="router.push('/admin')"
+              class="cursor-pointer focus:bg-white/10 text-primary focus:text-primary"
+            >
+              <LayoutDashboard class="mr-2 h-4 w-4" />
+              Admin Panel
+            </DropdownMenuItem>
+            <DropdownMenuSeparator class="bg-white/10" />
+          </template>
           <DropdownMenuItem
             @click="router.push('/account')"
             class="cursor-pointer focus:bg-white/10"
