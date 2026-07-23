@@ -126,9 +126,12 @@ test.describe('Recruiter-facing smoke flows', () => {
       }),
     ).toBeVisible()
 
+    // Wait for hydration so the click drives client-side navigation (not a lost pre-hydration click)
+    await page.waitForLoadState('networkidle')
     await page.getByRole('link', { name: /Shop Now/i }).click()
 
-    await expect(page).toHaveURL(/\/products$/)
+    // Tolerate an optional trailing slash (the app resolves to /products/)
+    await expect(page).toHaveURL(/\/products\/?$/)
     await expect(page.getByRole('heading', { name: /All Products/i })).toBeVisible()
   })
 
