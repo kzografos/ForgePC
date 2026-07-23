@@ -51,6 +51,9 @@ export default defineNuxtConfig({
   image: {
     format: ['webp'],
     quality: 80,
+    // Allowlist external image hosts so they're optimized (webp/resize) and
+    // edge-cached by Vercel instead of hot-linked direct + unoptimized (MED-4 / #7).
+    domains: ['images.unsplash.com'],
     screens: {
       xs: 320,
       sm: 640,
