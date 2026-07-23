@@ -23,7 +23,7 @@ const user = useSupabaseUser()
 const slug = route.params.slug as string
 
 // SSR-capable fetch so per-product OG/SEO meta lands in the server-rendered <head> (#8/MED-1)
-const { data: product, pending: loading, error } = await useAsyncData(
+const { data: product, pending: loading, error } = await useAsyncData<any>(
   `product-${slug}`,
   () => fetchProduct(slug),
 )
