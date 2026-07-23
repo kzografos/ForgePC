@@ -7,7 +7,7 @@ import { toast } from 'vue-sonner'
 import type { ReviewWithDetails, ReviewSortOption, ReviewStats } from '~/composables/useReviews'
 
 const route = useRoute()
-const { fetchProduct, loading, error } = useProducts()
+const { fetchProduct } = useProducts()
 const {
   fetchProductReviews,
   fetchReviewStats,
@@ -21,7 +21,33 @@ const cartStore = useCartStore()
 const user = useSupabaseUser()
 
 const slug = route.params.slug as string
-const product = ref<any>(null)
+
+// SSR-capable fetch so per-product OG/SEO meta lands in the server-rendered <head> (#8/MED-1)
+const { data: product, pending: loading, error } = await useAsyncData(
+  `product-${slug}`,
+  () => fetchProduct(slug),
+)
+
+const siteUrl = useRuntimeConfig().public.siteUrl as string
+const ogImage = computed(() => {
+  const img = product.value?.images?.[0]
+  if (!img) return `${siteUrl}/og-image.png`
+  return img.startsWith('http') ? img : `${siteUrl}${img}`
+})
+useSeoMeta({
+  title: () => (product.value ? `${product.value.name} — KZProducts` : 'Product — KZProducts'),
+  description: () => product.value?.description?.slice(0, 160) || 'Premium PC components for gaming and workstation builds.',
+  ogType: 'website',
+  ogUrl: () => `${siteUrl}/products/${slug}`,
+  ogTitle: () => (product.value ? `${product.value.name} — KZProducts` : 'KZProducts'),
+  ogDescription: () => product.value?.description?.slice(0, 160) || '',
+  ogImage: () => ogImage.value,
+  twitterCard: 'summary_large_image',
+  twitterTitle: () => product.value?.name || 'KZProducts',
+  twitterDescription: () => product.value?.description?.slice(0, 160) || '',
+  twitterImage: () => ogImage.value,
+})
+
 const imageError = ref(false)
 const selectedImageIndex = ref(0)
 
@@ -41,8 +67,6 @@ const reviewsOffset = ref(0)
 const hasMoreReviews = ref(false)
 
 onMounted(async () => {
-  product.value = await fetchProduct(slug)
-  
   if (product.value) {
     await loadReviewData()
   }
