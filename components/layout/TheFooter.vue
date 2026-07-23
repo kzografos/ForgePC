@@ -120,7 +120,7 @@ import {
               <Instagram class="h-4 w-4" aria-hidden="true" />
             </a>
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/konszogr/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Connect on LinkedIn"
@@ -129,7 +129,7 @@ import {
               <Linkedin class="h-4 w-4" aria-hidden="true" />
             </a>
             <a
-              href="mailto:support@kzproducts.com"
+              href="mailto:konszografos@gmail.com"
               aria-label="Email support at KZProducts"
               class="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-slate-400 transition-all hover:border-violet-500/30 hover:text-violet-400"
             >
