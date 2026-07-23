@@ -33,7 +33,7 @@ DELETE FROM public.categories WHERE slug NOT IN ('cpu','gpu','ram','ssd');  -- t
 
 -- ---------- 3. Reseed categories (known-good, local images) ------------------
 INSERT INTO public.categories (id, name, slug, description, sort_order, image_url) VALUES
-  (gen_random_uuid(), 'Processors',     'cpu', 'High-performance CPUs for gaming and workstation builds', 1, '/products/cpu-intel.jpg'),
+  (gen_random_uuid(), 'Processors',     'cpu', 'High-performance CPUs for gaming and workstation builds', 1, '/products/cpu-intel-i9.jpg'),
   (gen_random_uuid(), 'Graphics Cards', 'gpu', 'Powerful GPUs for gaming, rendering, and AI workloads',   2, '/products/gpu-nvidia.jpg'),
   (gen_random_uuid(), 'Memory',         'ram', 'High-speed DDR5 memory modules for maximum performance',  3, '/products/ram.jpg'),
   (gen_random_uuid(), 'Storage',        'ssd', 'NVMe SSDs with blazing fast read/write speeds',           4, '/products/ssd.jpg')
@@ -54,12 +54,12 @@ FROM (VALUES
   -- Processors ---------------------------------------------------------------
   ('Intel Core i9-14900K', 'intel-i9-14900k',
    'The Intel Core i9-14900K is the flagship processor of Intel''s 14th generation Raptor Lake Refresh lineup. With 24 cores (8P + 16E), 32 threads, and boost clocks up to 6.0 GHz, it delivers exceptional performance for gaming and content creation.',
-   589.99::numeric, 649.99::numeric, ARRAY['/products/cpu-intel.jpg'], 'cpu', 15, true,
+   589.99::numeric, 649.99::numeric, ARRAY['/products/cpu-intel-i9.jpg'], 'cpu', 15, true,
    '{"cores":"24 (8P + 16E)","threads":"32","base_clock":"3.2 GHz","boost_clock":"6.0 GHz","cache":"36MB L3","tdp":"125W","socket":"LGA 1700"}'::jsonb),
 
   ('AMD Ryzen 9 7950X', 'amd-ryzen-9-7950x',
    'The AMD Ryzen 9 7950X represents the pinnacle of AMD''s Zen 4 architecture. With 16 cores, 32 threads, and boost speeds up to 5.7 GHz, it excels in both single- and multi-threaded workloads.',
-   549.99::numeric, 699.99::numeric, ARRAY['/products/cpu-amd.jpg'], 'cpu', 12, true,
+   549.99::numeric, 699.99::numeric, ARRAY['/products/cpu-ryzen-9.jpg'], 'cpu', 12, true,
    '{"cores":"16","threads":"32","base_clock":"4.5 GHz","boost_clock":"5.7 GHz","cache":"64MB L3","tdp":"170W","socket":"AM5"}'::jsonb),
 
   -- Graphics Cards -----------------------------------------------------------
@@ -70,7 +70,7 @@ FROM (VALUES
 
   ('NVIDIA GeForce RTX 4080 SUPER', 'nvidia-rtx-4080-super',
    'The RTX 4080 SUPER brings enhanced performance with 10,240 CUDA cores and 16GB GDDR6X memory. Built on Ada Lovelace for exceptional 4K gaming.',
-   999.99::numeric, 1199.99::numeric, ARRAY['/products/gpu-nvidia-2.jpg','/products/gpu-nvidia.jpg'], 'gpu', 10, true,
+   999.99::numeric, 1199.99::numeric, ARRAY['/products/gpu-nvidia.jpg','/products/gpu-nvidia-2.jpg'], 'gpu', 10, true,
    '{"cuda_cores":"10240","memory":"16GB GDDR6X","memory_bus":"256-bit","boost_clock":"2.55 GHz","tdp":"320W","ray_tracing":"3rd Gen RT Cores","dlss":"DLSS 3.0"}'::jsonb),
 
   ('AMD Radeon RX 7900 XTX', 'amd-rx-7900-xtx',
