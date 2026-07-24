@@ -38,7 +38,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section ref="root" class="not-prose my-12">
+  <section ref="root">
     <!-- Section header -->
     <header class="mb-8">
       <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-primary">Why KZProducts</p>

@@ -2,6 +2,7 @@
 import { defineAsyncComponent } from 'vue';
 import { Button } from "@/components/ui/button";
 import CategoryShowcase from "@/components/home/CategoryShowcase.vue";
+import FeatureList from "@/components/home/FeatureList.vue";
 import AnimatedBackground from "@/components/ui/AnimatedBackground.vue";
 const HeroAnimatedBeam = defineAsyncComponent(() => import("@/components/home/HeroAnimatedBeam.vue"));
 
@@ -76,13 +77,9 @@ const { data: page } = await useAsyncData("index", () =>
       <CategoryShowcase />
     </div>
 
-    <!-- Features Section from Content -->
-    <section class="container relative py-16">
-      <article
-        class="prose prose-lg prose-invert mx-auto max-w-4xl prose-headings:text-white prose-p:text-slate-400 prose-a:text-violet-400"
-      >
-        <ContentDoc />
-      </article>
-    </section>
+    <!-- Features Section -->
+    <div class="container relative py-16">
+      <FeatureList />
+    </div>
   </div>
 </template>

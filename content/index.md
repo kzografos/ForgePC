@@ -10,9 +10,4 @@ hero:
   cta_secondary_link: "/about"
 ---
 
-# Welcome to KZProducts
-
-Your one-stop destination for high-performance PC hardware. Whether you're building a gaming rig, a content creation workstation, or upgrading your existing setup, we have the components you need.
-
-::feature-list
-::
+<!-- Body intentionally empty: the hero uses the frontmatter above; homepage sections (incl. FeatureList) live in pages/index.vue. -->
