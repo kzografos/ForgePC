@@ -38,7 +38,7 @@ describe('server/api/newsletter/subscribe.post', () => {
     expect(sendWelcomeEmailMock).toHaveBeenCalledWith('newuser@example.com')
     expect(result).toEqual({
       success: true,
-      message: 'Thank you for subscribing! Check your inbox for a welcome email.',
+      message: "Thanks — you're on the list.",
     })
   })
 
@@ -123,7 +123,7 @@ describe('server/api/newsletter/subscribe.post', () => {
     expect(warnSpy).toHaveBeenCalled()
     expect(result).toEqual({
       success: true,
-      message: 'Thank you for subscribing! Check your inbox for a welcome email.',
+      message: "Thanks — you're on the list.",
     })
   })
 })

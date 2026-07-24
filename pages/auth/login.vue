@@ -112,15 +112,7 @@ const handleLogin = async () => {
           />
         </div>
         <div class="grid gap-2">
-          <div class="flex items-center justify-between">
-            <Label for="password">Password</Label>
-            <NuxtLink 
-              to="/auth/forgot-password" 
-              class="text-xs text-primary underline-offset-4 hover:underline"
-            >
-              Forgot password?
-            </NuxtLink>
-          </div>
+          <Label for="password">Password</Label>
           <Input
             id="password"
             type="password"

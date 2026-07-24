@@ -128,7 +128,7 @@ const formatPrice = (price: number) => {
             <div class="space-y-3 text-sm text-muted-foreground mb-8">
               <div class="flex items-center justify-center gap-2">
                 <Package class="w-4 h-4" />
-                <span>You will receive an email confirmation shortly</span>
+                <span>Your order is confirmed — view it anytime in your account.</span>
               </div>
             </div>
 

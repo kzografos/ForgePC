@@ -80,7 +80,7 @@ export default defineEventHandler(async (event) => {
 
     return {
       success: true,
-      message: 'Thank you for subscribing! Check your inbox for a welcome email.'
+      message: "Thanks — you're on the list."
     }
   } catch (error: any) {
     // Re-throw createError instances
