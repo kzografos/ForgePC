@@ -126,7 +126,7 @@ export async function sendWelcomeEmail(
             </table>
             
             <!-- CTA Button -->
-            <a href="${process.env.NUXT_PUBLIC_SITE_URL || "https://forgepc.com"}/products" 
+            <a href="${process.env.NUXT_PUBLIC_SITE_URL || "https://forgepc.vercel.app"}/products"
                style="display: inline-block; padding: 14px 32px; background-color: #8b5cf6; color: #ffffff; text-decoration: none; border-radius: 12px; font-weight: 600; font-size: 16px;">
               Browse Products
             </a>
