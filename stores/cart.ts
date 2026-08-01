@@ -17,7 +17,9 @@ export interface CartItem {
   quantity: number
 }
 
-const CART_STORAGE_KEY = 'kz-cart'
+const CART_STORAGE_KEY = 'forgepc-cart'
+// Legacy key from the KZProducts branding - read once, then migrate and drop it.
+const LEGACY_CART_STORAGE_KEY = 'kz-cart'
 const hasBrowserStorage = () =>
   typeof window !== 'undefined' && typeof window.localStorage !== 'undefined'
 
@@ -51,10 +53,18 @@ export const useCartStore = defineStore('cart', () => {
   const initFromStorage = () => {
     if (hasBrowserStorage() && !isHydrated.value) {
       try {
-        const saved = localStorage.getItem(CART_STORAGE_KEY)
+        let saved = localStorage.getItem(CART_STORAGE_KEY)
+        if (!saved) {
+          const legacy = localStorage.getItem(LEGACY_CART_STORAGE_KEY)
+          if (legacy) {
+            localStorage.setItem(CART_STORAGE_KEY, legacy)
+            saved = legacy
+          }
+        }
         if (saved) {
           items.value = JSON.parse(saved)
         }
+        localStorage.removeItem(LEGACY_CART_STORAGE_KEY)
       } catch (e) {
         console.warn('Failed to load cart from localStorage:', e)
       }

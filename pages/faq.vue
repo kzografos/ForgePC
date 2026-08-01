@@ -3,7 +3,7 @@ import { ChevronDown, HelpCircle, ShoppingCart, Truck, RefreshCw, CreditCard, Sh
 import { Card, CardContent } from '@/components/ui/card'
 
 useSeoMeta({
-  title: 'FAQ - KZProducts',
+  title: 'FAQ - ForgePC',
   description: 'Find answers to frequently asked questions about orders, shipping, returns, and more.'
 })
 

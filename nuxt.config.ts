@@ -116,7 +116,7 @@ export default defineNuxtConfig({
         lang: 'en',
       },
       meta: [
-        { name: 'description', content: 'KZProducts - Build your dream PC with the best CPUs, GPUs, and components for gaming and workstation builds.' },
+        { name: 'description', content: 'ForgePC - Build your dream PC with the best CPUs, GPUs, and components for gaming and workstation builds.' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       ],
       link: [
@@ -153,7 +153,7 @@ export default defineNuxtConfig({
       // Set DEMO_MODE=false to allow destructive admin actions (real catalog work).
       demoMode: process.env.DEMO_MODE !== 'false',
       // HIGH-3: absolute origin for OpenGraph/Twitter image URLs.
-      siteUrl: process.env.SITE_URL || 'https://kz-products.vercel.app',
+      siteUrl: process.env.SITE_URL || 'https://forgepc.vercel.app',
     }
   },
   components: [

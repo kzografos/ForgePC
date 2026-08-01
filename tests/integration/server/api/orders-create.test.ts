@@ -35,7 +35,7 @@ describe('server/api/orders/create.post', () => {
     const insertOrderQuery = createQueryBuilder({
       data: {
         id: 'order-1',
-        order_number: 'KZ-ORDER-1',
+        order_number: 'FP-ORDER-1',
         total: 2598,
         status: 'pending',
         created_at: '2026-01-01T00:00:00.000Z',
@@ -85,7 +85,7 @@ describe('server/api/orders/create.post', () => {
       success: true,
       order: {
         id: 'order-1',
-        orderNumber: 'KZ-ORDER-1',
+        orderNumber: 'FP-ORDER-1',
         total: 2598,
         status: 'pending',
         createdAt: '2026-01-01T00:00:00.000Z',
@@ -97,7 +97,7 @@ describe('server/api/orders/create.post', () => {
     const insertOrderQuery = createQueryBuilder({
       data: {
         id: 'order-1',
-        order_number: 'KZ-ORDER-1',
+        order_number: 'FP-ORDER-1',
         total: 2598,
         status: 'pending',
         created_at: '2026-01-01T00:00:00.000Z',
@@ -163,7 +163,7 @@ describe('server/api/orders/create.post', () => {
     const insertOrderQuery = createQueryBuilder({
       data: {
         id: 'order-1',
-        order_number: 'KZ-ORDER-1',
+        order_number: 'FP-ORDER-1',
         total: 2598,
         status: 'pending',
         created_at: '2026-01-01T00:00:00.000Z',

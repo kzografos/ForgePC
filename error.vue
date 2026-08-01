@@ -13,7 +13,7 @@ const message = computed(() =>
     : props.error?.statusMessage || 'An unexpected error occurred. Please try again.'
 )
 
-useSeoMeta({ title: () => `${code.value} — KZProducts` })
+useSeoMeta({ title: () => `${code.value} — ForgePC` })
 
 // clearError resets Nuxt's error state, then routes.
 const go = (path: string) => clearError({ redirect: path })
@@ -42,7 +42,7 @@ const go = (path: string) => clearError({ redirect: path })
       <span class="rounded-lg bg-primary/10 p-1.5">
         <Sparkles class="h-5 w-5 text-primary" />
       </span>
-      <span class="font-bold">KZProducts</span>
+      <span class="font-bold">ForgePC</span>
     </button>
 
     <!-- Content -->

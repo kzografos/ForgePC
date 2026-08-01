@@ -13,21 +13,21 @@ We'd love to hear from you! Whether you have a question about our products, need
 
 For order inquiries, returns, or general support:
 
-- **Email**: support@kzproducts.com
+- **Email**: support@forgepc.com
 - **Response Time**: Within 24 hours
 
 ### Technical Questions
 
 Need help choosing the right components for your build?
 
-- **Email**: tech@kzproducts.com
+- **Email**: tech@forgepc.com
 - Our experts can help with compatibility, performance optimization, and build recommendations.
 
 ### Business Inquiries
 
 Interested in partnerships or wholesale orders?
 
-- **Email**: business@kzproducts.com
+- **Email**: business@forgepc.com
 
 ## Office Hours
 
@@ -37,7 +37,7 @@ Interested in partnerships or wholesale orders?
 
 ## Location
 
-KZProducts  
+ForgePC  
 Athens, Greece  
 European Union
 

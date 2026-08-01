@@ -5,18 +5,18 @@ import { Toaster } from 'vue-sonner'
 const siteUrl = useRuntimeConfig().public.siteUrl as string
 const ogImage = `${siteUrl}/og-image.png`
 useSeoMeta({
-  ogSiteName: 'KZProducts',
+  ogSiteName: 'ForgePC',
   ogType: 'website',
   ogUrl: siteUrl,
-  ogTitle: 'KZProducts — Build Your Dream PC',
+  ogTitle: 'ForgePC — Build Your Dream PC',
   ogDescription: 'The best CPUs, GPUs, and components for gaming and workstation builds.',
   ogImage,
   ogImageWidth: 1200,
   ogImageHeight: 630,
   ogImageType: 'image/png',
-  ogImageAlt: 'KZProducts — Build Your Dream PC',
+  ogImageAlt: 'ForgePC — Build Your Dream PC',
   twitterCard: 'summary_large_image',
-  twitterTitle: 'KZProducts — Build Your Dream PC',
+  twitterTitle: 'ForgePC — Build Your Dream PC',
   twitterDescription: 'The best CPUs, GPUs, and components for gaming and workstation builds.',
   twitterImage: ogImage,
 })

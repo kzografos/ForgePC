@@ -31,7 +31,7 @@ import { Button } from '@/components/ui/button'
               <Sparkles class="h-6 w-6 text-primary" />
             </div>
             <span class="text-2xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text">
-              KZProducts
+              ForgePC
             </span>
           </NuxtLink>
         </div>

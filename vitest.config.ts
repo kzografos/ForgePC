@@ -23,7 +23,7 @@ export default defineConfig({
     },
   },
   test: {
-    name: 'kz-products',
+    name: 'forgepc',
     globals: true,
     environment: 'happy-dom',
     setupFiles: ['tests/setup/vitest.setup.ts'],

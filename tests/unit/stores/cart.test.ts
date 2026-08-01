@@ -25,7 +25,7 @@ describe('stores/cart', () => {
 
   it('hydrates from localStorage and updates count/total', () => {
     localStorage.setItem(
-      'kz-cart',
+      'forgepc-cart',
       JSON.stringify([
         {
           productId: product.id,
@@ -42,6 +42,26 @@ describe('stores/cart', () => {
     expect(store.items).toHaveLength(1)
     expect(store.count).toBe(2)
     expect(store.total).toBe(2598)
+  })
+
+  it('migrates a legacy kz-cart payload to the forgepc-cart key', () => {
+    localStorage.setItem(
+      'kz-cart',
+      JSON.stringify([
+        {
+          productId: product.id,
+          product,
+          quantity: 3,
+        },
+      ]),
+    )
+
+    const store = useCartStore()
+    store.initFromStorage()
+
+    expect(store.count).toBe(3)
+    expect(localStorage.getItem('kz-cart')).toBeNull()
+    expect(JSON.parse(localStorage.getItem('forgepc-cart') ?? '[]')).toHaveLength(1)
   })
 
   it('adds, updates, and removes items', async () => {

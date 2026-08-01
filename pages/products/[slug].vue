@@ -35,15 +35,15 @@ const ogImage = computed(() => {
   return img.startsWith('http') ? img : `${siteUrl}${img}`
 })
 useSeoMeta({
-  title: () => (product.value ? `${product.value.name} — KZProducts` : 'Product — KZProducts'),
+  title: () => (product.value ? `${product.value.name} — ForgePC` : 'Product — ForgePC'),
   description: () => product.value?.description?.slice(0, 160) || 'Premium PC components for gaming and workstation builds.',
   ogType: 'website',
   ogUrl: () => `${siteUrl}/products/${slug}`,
-  ogTitle: () => (product.value ? `${product.value.name} — KZProducts` : 'KZProducts'),
+  ogTitle: () => (product.value ? `${product.value.name} — ForgePC` : 'ForgePC'),
   ogDescription: () => product.value?.description?.slice(0, 160) || '',
   ogImage: () => ogImage.value,
   twitterCard: 'summary_large_image',
-  twitterTitle: () => product.value?.name || 'KZProducts',
+  twitterTitle: () => product.value?.name || 'ForgePC',
   twitterDescription: () => product.value?.description?.slice(0, 160) || '',
   twitterImage: () => ogImage.value,
 })

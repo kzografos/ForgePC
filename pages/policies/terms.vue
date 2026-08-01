@@ -2,8 +2,8 @@
 import { FileText, ShoppingBag, CreditCard, Truck, Shield, Scale, AlertTriangle } from 'lucide-vue-next'
 
 useSeoMeta({
-  title: 'Terms of Service - KZProducts',
-  description: 'Read our terms and conditions for using the KZProducts website and purchasing our products.'
+  title: 'Terms of Service - ForgePC',
+  description: 'Read our terms and conditions for using the ForgePC website and purchasing our products.'
 })
 
 const lastUpdated = 'January 15, 2026'
@@ -12,9 +12,9 @@ const sections = [
   {
     icon: FileText,
     title: 'Acceptance of Terms',
-    content: `By accessing and using the KZProducts website (the "Site") and purchasing our products, you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our Site.
+    content: `By accessing and using the ForgePC website (the "Site") and purchasing our products, you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our Site.
 
-These Terms constitute a legally binding agreement between you and KZProducts ("we", "us", or "our"). We reserve the right to update these Terms at any time, and your continued use of the Site constitutes acceptance of any changes.`
+These Terms constitute a legally binding agreement between you and ForgePC ("we", "us", or "our"). We reserve the right to update these Terms at any time, and your continued use of the Site constitutes acceptance of any changes.`
   },
   {
     icon: ShoppingBag,
@@ -54,7 +54,7 @@ These Terms constitute a legally binding agreement between you and KZProducts ("
     title: 'Warranty & Liability',
     content: `**Product Warranty**: Products are covered by the manufacturer's warranty. Warranty terms vary by product and manufacturer.
 
-**Limitation of Liability**: To the maximum extent permitted by law, KZProducts shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of our products or services.
+**Limitation of Liability**: To the maximum extent permitted by law, ForgePC shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of our products or services.
 
 **Maximum Liability**: Our total liability for any claim shall not exceed the amount you paid for the specific product giving rise to the claim.
 
@@ -63,7 +63,7 @@ These Terms constitute a legally binding agreement between you and KZProducts ("
   {
     icon: Scale,
     title: 'Intellectual Property',
-    content: `**Ownership**: All content on this Site, including text, graphics, logos, images, and software, is the property of KZProducts or its licensors and is protected by intellectual property laws.
+    content: `**Ownership**: All content on this Site, including text, graphics, logos, images, and software, is the property of ForgePC or its licensors and is protected by intellectual property laws.
 
 **Limited License**: You are granted a limited, non-exclusive license to access and use the Site for personal, non-commercial purposes.
 
@@ -78,7 +78,7 @@ These Terms constitute a legally binding agreement between you and KZProducts ("
 
 **Severability**: If any provision of these Terms is found to be unenforceable, the remaining provisions shall continue in full force and effect.
 
-**Entire Agreement**: These Terms, together with our Privacy Policy and any other policies referenced herein, constitute the entire agreement between you and KZProducts.`
+**Entire Agreement**: These Terms, together with our Privacy Policy and any other policies referenced herein, constitute the entire agreement between you and ForgePC.`
   }
 ]
 </script>
@@ -143,10 +143,10 @@ These Terms constitute a legally binding agreement between you and KZProducts ("
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a 
-            href="mailto:legal@kzproducts.com"
+            href="mailto:legal@forgepc.com"
             class="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90 transition-colors"
           >
-            legal@kzproducts.com
+            legal@forgepc.com
           </a>
           <NuxtLink 
             to="/contact" 

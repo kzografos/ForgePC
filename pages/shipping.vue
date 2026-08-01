@@ -3,7 +3,7 @@ import { Truck, Clock, MapPin, Package, CheckCircle, Globe } from 'lucide-vue-ne
 import { Card, CardContent } from '@/components/ui/card'
 
 useSeoMeta({
-  title: 'Shipping Information - KZProducts',
+  title: 'Shipping Information - ForgePC',
   description: 'Learn about our shipping options, delivery times, and shipping zones across Europe and worldwide.'
 })
 

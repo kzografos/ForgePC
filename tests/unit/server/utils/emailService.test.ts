@@ -80,7 +80,7 @@ describe('server/utils/emailService', () => {
     expect(sendMailMock).toHaveBeenCalledWith(
       expect.objectContaining({
         to: 'welcome@example.com',
-        subject: expect.stringContaining('Welcome to KZProducts'),
+        subject: expect.stringContaining('Welcome to ForgePC'),
         html: expect.stringContaining('Browse Products'),
       }),
     )

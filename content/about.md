@@ -1,13 +1,13 @@
 ---
-title: "About KZProducts"
+title: "About ForgePC"
 description: "Learn about our mission to provide premium PC hardware to enthusiasts and professionals."
 ---
 
-# About KZProducts
+# About ForgePC
 
 ## Our Mission
 
-At KZProducts, we believe that everyone deserves access to premium PC hardware. Founded by enthusiasts, for enthusiasts, we've built our reputation on quality, expertise, and exceptional customer service.
+At ForgePC, we believe that everyone deserves access to premium PC hardware. Founded by enthusiasts, for enthusiasts, we've built our reputation on quality, expertise, and exceptional customer service.
 
 ## What Sets Us Apart
 

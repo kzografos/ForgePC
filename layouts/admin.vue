@@ -67,7 +67,7 @@ const handleLogout = async () => {
             v-if="sidebarOpen"
             class="text-lg font-semibold transition-opacity duration-200 group-hover:text-violet-300"
           >
-            KZProducts
+            ForgePC
           </span>
         </NuxtLink>
         <button

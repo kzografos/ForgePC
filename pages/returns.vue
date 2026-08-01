@@ -3,7 +3,7 @@ import { RefreshCw, Package, CheckCircle, XCircle, Clock, ArrowRight } from 'luc
 import { Card, CardContent } from '@/components/ui/card'
 
 useSeoMeta({
-  title: 'Returns & Refunds - KZProducts',
+  title: 'Returns & Refunds - ForgePC',
   description: 'Learn about our 30-day return policy, refund process, and how to return or exchange products.'
 })
 

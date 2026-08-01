@@ -20,8 +20,8 @@ const error = ref<string | null>(null)
 // Demo accounts printed on the login screen (HIGH-1).
 // NOTE: these strings must match the Supabase Auth users you provisioned.
 const demoAccounts = [
-  { label: 'Admin', email: 'admin@kzproducts.dev', password: 'DemoAdmin123' },
-  { label: 'Shopper', email: 'shopper@kzproducts.dev', password: 'DemoUser123' },
+  { label: 'Admin', email: 'admin@forgepc.dev', password: 'DemoAdmin123' },
+  { label: 'Shopper', email: 'shopper@forgepc.dev', password: 'DemoUser123' },
 ]
 const fillDemo = (account: { email: string; password: string }) => {
   email.value = account.email

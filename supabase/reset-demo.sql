@@ -1,5 +1,5 @@
 -- ============================================================================
--- KZProducts — DEMO RESET  (repeatable, idempotent)
+-- ForgePC — DEMO RESET  (repeatable, idempotent)
 -- ============================================================================
 -- Run this in the Supabase SQL Editor to restore a KNOWN-GOOD demo state:
 --   1) wipes ALL transactional residue + the whole catalog (test rows included)

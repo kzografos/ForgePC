@@ -89,15 +89,15 @@ describe('server/api/stripe/create-checkout-session.post', () => {
       },
     } as never)
     readBodyMock.mockResolvedValue(checkoutBody as never)
-    getRequestURLMock.mockReturnValue(new URL('https://kzproducts.test/checkout'))
+    getRequestURLMock.mockReturnValue(new URL('https://forgepc.test/checkout'))
 
     const result = await createCheckoutSessionHandler({} as never)
 
     expect(stripeCheckoutCreate).toHaveBeenCalledWith(
       expect.objectContaining({
         customer_email: 'buyer@example.com',
-        success_url: 'https://kzproducts.test/checkout/success?session_id={CHECKOUT_SESSION_ID}',
-        cancel_url: 'https://kzproducts.test/cart',
+        success_url: 'https://forgepc.test/checkout/success?session_id={CHECKOUT_SESSION_ID}',
+        cancel_url: 'https://forgepc.test/cart',
         line_items: [
           expect.objectContaining({
             quantity: 2,

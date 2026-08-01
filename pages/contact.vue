@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 
 useSeoMeta({
-  title: 'Contact Us - KZProducts',
+  title: 'Contact Us - ForgePC',
   description: 'Get in touch with our team for support, inquiries, or partnership opportunities.'
 })
 
@@ -93,7 +93,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email Us',
-    details: 'support@kzproducts.com',
+    details: 'support@forgepc.com',
     subtext: 'We reply within 24 hours'
   },
   {

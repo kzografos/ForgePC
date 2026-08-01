@@ -2,8 +2,8 @@
 import { Shield, Eye, Lock, UserCheck, Database, Mail } from 'lucide-vue-next'
 
 useSeoMeta({
-  title: 'Privacy Policy - KZProducts',
-  description: 'Learn how we collect, use, and protect your personal information at KZProducts.'
+  title: 'Privacy Policy - ForgePC',
+  description: 'Learn how we collect, use, and protect your personal information at ForgePC.'
 })
 
 const lastUpdated = 'January 15, 2026'
@@ -80,7 +80,7 @@ All third parties are required to protect your information and use it only for t
 
 • **Opt-Out**: Unsubscribe from marketing communications at any time.
 
-To exercise these rights, please contact us at privacy@kzproducts.com.`
+To exercise these rights, please contact us at privacy@forgepc.com.`
   },
   {
     icon: Mail,
@@ -155,10 +155,10 @@ You can manage cookie preferences through your browser settings. Note that disab
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a 
-            href="mailto:privacy@kzproducts.com"
+            href="mailto:privacy@forgepc.com"
             class="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90 transition-colors"
           >
-            privacy@kzproducts.com
+            privacy@forgepc.com
           </a>
           <NuxtLink 
             to="/contact" 

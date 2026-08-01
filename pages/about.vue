@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 
 useSeoMeta({
-  title: 'About Us - KZProducts',
+  title: 'About Us - ForgePC',
   description: 'Learn about our mission to provide premium PC hardware to enthusiasts and professionals.'
 })
 
@@ -59,14 +59,14 @@ const stats = [
       <div class="container relative">
         <div class="max-w-3xl">
           <span class="inline-block px-3 py-1 mb-6 text-sm font-medium rounded-full bg-primary/10 text-primary">
-            About KZProducts
+            About ForgePC
           </span>
           <h1 class="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-6">
             Built by Enthusiasts,
             <span class="text-primary">For Enthusiasts</span>
           </h1>
           <p class="text-xl text-muted-foreground leading-relaxed mb-8">
-            At KZProducts, we believe everyone deserves access to premium PC hardware. 
+            At ForgePC, we believe everyone deserves access to premium PC hardware. 
             We've built our reputation on quality, expertise, and exceptional customer service.
           </p>
           <div class="flex flex-wrap gap-4">

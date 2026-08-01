@@ -1,5 +1,5 @@
 -- ============================================================================
--- KZProducts — CATALOG SEED  (non-destructive, idempotent)
+-- ForgePC — CATALOG SEED  (non-destructive, idempotent)
 -- ============================================================================
 -- Upserts the known-good catalog: 4 categories + 7 real components, all with
 -- self-contained LOCAL images (public/products/*.jpg). Safe to re-run — it only

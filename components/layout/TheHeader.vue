@@ -113,7 +113,7 @@ watch(() => route.fullPath, closeMobileMenu)
           <nav class="flex h-full flex-col gap-6 overflow-y-auto px-5 py-6 pr-8">
             <NuxtLink to="/" class="flex items-center gap-2 text-lg font-bold" @click="closeMobileMenu">
               <Sparkles class="h-5 w-5 text-primary" />
-              KZProducts
+              ForgePC
             </NuxtLink>
 
             <div class="space-y-2">
@@ -180,7 +180,7 @@ watch(() => route.fullPath, closeMobileMenu)
             <Sparkles class="h-5 w-5 text-primary" />
           </div>
           <span class="hidden font-bold sm:inline-block bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text">
-            KZProducts
+            ForgePC
           </span>
         </NuxtLink>
         <nav class="flex items-center space-x-1 text-sm font-medium">

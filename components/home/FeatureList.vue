@@ -41,7 +41,7 @@ onMounted(() => {
   <section ref="root">
     <!-- Section header -->
     <header class="mb-8">
-      <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-primary">Why KZProducts</p>
+      <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-primary">Why ForgePC</p>
       <h2 class="mt-2 text-3xl font-medium tracking-[-0.02em] text-foreground md:text-4xl">
         Everything your build needs
       </h2>

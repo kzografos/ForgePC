@@ -22,7 +22,7 @@ import {
             <div class="rounded-lg bg-violet-500/20 p-1.5">
               <Sparkles class="h-5 w-5 text-violet-400" />
             </div>
-            <span class="font-bold text-white">KZProducts</span>
+            <span class="font-bold text-white">ForgePC</span>
           </NuxtLink>
           <p class="max-w-xs text-sm text-slate-400">
             Premium PC components for gaming and workstation builds.
@@ -130,7 +130,7 @@ import {
             </a>
             <a
               href="mailto:konszografos@gmail.com"
-              aria-label="Email support at KZProducts"
+              aria-label="Email support at ForgePC"
               class="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-slate-400 transition-all hover:border-violet-500/30 hover:text-violet-400"
             >
               <Mail class="h-4 w-4" aria-hidden="true" />
@@ -154,7 +154,7 @@ import {
       <div class="mt-12 border-t border-white/10 pt-8">
         <div class="flex justify-center">
           <p class="text-center text-sm text-slate-400">
-            &copy; {{ new Date().getFullYear() }} KZProducts. All rights reserved.
+            &copy; {{ new Date().getFullYear() }} ForgePC. All rights reserved.
           </p>
         </div>
       </div>

@@ -37,7 +37,7 @@ interface EmailOptions {
 export async function sendEmail(
   options: EmailOptions,
 ): Promise<{ success: boolean; error?: string }> {
-  const fromAddress = options.from || "KZProducts <noreply@kzproducts.com>";
+  const fromAddress = options.from || "ForgePC <noreply@forgepc.com>";
 
   try {
     if (isDev) {
@@ -90,7 +90,7 @@ export async function sendWelcomeEmail(
               <span style="display: inline-block; padding: 8px 12px; background-color: rgba(139, 92, 246, 0.2); border-radius: 8px;">
                 <span style="font-size: 24px;">✨</span>
               </span>
-              <span style="color: #ffffff; font-size: 24px; font-weight: bold; margin-left: 8px; vertical-align: middle;">KZProducts</span>
+              <span style="color: #ffffff; font-size: 24px; font-weight: bold; margin-left: 8px; vertical-align: middle;">ForgePC</span>
             </div>
             
             <!-- Heading -->
@@ -126,7 +126,7 @@ export async function sendWelcomeEmail(
             </table>
             
             <!-- CTA Button -->
-            <a href="${process.env.NUXT_PUBLIC_SITE_URL || "https://kzproducts.com"}/products" 
+            <a href="${process.env.NUXT_PUBLIC_SITE_URL || "https://forgepc.com"}/products" 
                style="display: inline-block; padding: 14px 32px; background-color: #8b5cf6; color: #ffffff; text-decoration: none; border-radius: 12px; font-weight: 600; font-size: 16px;">
               Browse Products
             </a>
@@ -134,7 +134,7 @@ export async function sendWelcomeEmail(
             <!-- Footer -->
             <p style="color: #64748b; font-size: 12px; margin-top: 32px;">
               You're receiving this email because you subscribed to our newsletter.<br>
-              © ${new Date().getFullYear()} KZProducts. All rights reserved.
+              © ${new Date().getFullYear()} ForgePC. All rights reserved.
             </p>
           </td>
         </tr>
@@ -145,7 +145,7 @@ export async function sendWelcomeEmail(
 
   return sendEmail({
     to: email,
-    subject: "Welcome to KZProducts! 🎉",
+    subject: "Welcome to ForgePC! 🎉",
     html,
   });
 }

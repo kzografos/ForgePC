@@ -9,8 +9,8 @@ definePageMeta({
 
 // Settings state
 const settings = ref({
-  storeName: 'KZProducts',
-  storeEmail: 'support@kzproducts.com',
+  storeName: 'ForgePC',
+  storeEmail: 'support@forgepc.com',
   currency: 'EUR',
   language: 'el',
   emailNotifications: true,
