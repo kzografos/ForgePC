@@ -153,7 +153,7 @@ export default defineNuxtConfig({
       // Set DEMO_MODE=false to allow destructive admin actions (real catalog work).
       demoMode: process.env.DEMO_MODE !== 'false',
       // HIGH-3: absolute origin for OpenGraph/Twitter image URLs.
-      siteUrl: process.env.SITE_URL || 'https://forgepc.vercel.app',
+      siteUrl: process.env.SITE_URL || 'https://forgepc-store.vercel.app',
     }
   },
   components: [
